@@ -14,7 +14,16 @@ body {
     line-height: 66px;
     margin-top: 40px;
 }
+.jogo-da-memoria {
+    margin-left: 122px;
+    margin-right: 116px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .carta {
+    margin-top: 34px;
     width: 200px;
     height: 250px;
     position: relative;
@@ -31,12 +40,16 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 47px;
+    top: 13px;
     backface-visibility: hidden;
     transition: all .5s;
     transform-style: preserve-3d;
   }
   .front-face-card img {
+    width: 100px;
+    height: 100px;
+  }
+  .back-face-card img {
     width: 100px;
     height: 100px;
   }
