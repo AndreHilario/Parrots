@@ -22,9 +22,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
 }
-.escondido {
-    display: none;
-}
 .carta {
     margin-top: 34px;
     width: 200px;
@@ -61,10 +58,10 @@ body {
     transform: rotateY(180deg);
   }
 
-  .carta:hover .back-face-card {
+  .carta .back-face-card {
     transform: rotateY(0deg);
   }
 
-  .carta:hover .front-face-card {
+  .carta .front-face-card {
     transform: rotateY(-180deg);
   }
