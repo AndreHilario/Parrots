@@ -65,3 +65,17 @@ body {
   .carta .front-face-card {
     transform: rotateY(-180deg);
   }
+  @media (max-width: 614px){
+    .jogo-da-memoria {
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-between;
+    }
+    .titulo h1 {
+        width: 312px;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 42px;
+        text-align: center;
+    }
+  }
