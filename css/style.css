@@ -39,6 +39,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
     position: absolute;
     top: 13px;
     backface-visibility: hidden;
@@ -48,6 +49,7 @@ body {
   .front-face-card img {
     width: 100px;
     height: 100px;
+
   }
   .back-face-card img {
     width: 100px;
@@ -55,16 +57,22 @@ body {
   }
 
   .back-face-card {
-    transform: rotateY(180deg);
-  }
-
-  .carta .back-face-card {
     transform: rotateY(0deg);
   }
 
-  .carta .front-face-card {
-    transform: rotateY(-180deg);
+  .girar-back-face-card {
+    transform: rotateY(180deg);
   }
+
+  .girar-front-face-card {
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    
+  }
+  .clicado {
+    font-size: 1px;
+  }
+  
   @media (max-width: 614px){
     .jogo-da-memoria {
         flex-direction: column;
