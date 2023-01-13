@@ -39,7 +39,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
     position: absolute;
     top: 13px;
     backface-visibility: hidden;
@@ -57,16 +56,15 @@ body {
   }
 
   .back-face-card {
-    transform: rotateY(0deg);
-  }
-
-  .girar-back-face-card {
     transform: rotateY(180deg);
   }
 
-  .girar-front-face-card {
+  .girar-back .face-card {
+    transform: rotateY(0deg);
+  }
+
+  .girar-front .face-card {
     transform: rotateY(-180deg);
-    backface-visibility: hidden;
     
   }
   .clicado {
