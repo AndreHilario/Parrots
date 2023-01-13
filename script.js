@@ -1,4 +1,4 @@
-let content;
+
 const listaCards = ['bobrossparrot', 'explodyparrot', 'fiestaparrot', 'metalparrot', 'revertitparrot', 
 'tripletsparrot', 'unicornparrot', 'bobrossparrot', 'explodyparrot', 'fiestaparrot', 'metalparrot', 'revertitparrot', 
 'tripletsparrot', 'unicornparrot'];
@@ -9,24 +9,16 @@ let numCard = 0;
 const cartas = document.querySelector('.jogo-da-memoria');
 console.log(cartas);
 
-function criarElementos(tag, divClass){
-    const elemento = document.createElement(tag);
-    elemento.className = divClass;
-    return elemento;
-}
-
 function criarCartas(){
-    const divCarta = criarElementos('div', 'carta');
-    const divFrente = criarElementos('div', 'face-card front-face-card');
-    const divBack = criarElementos('div', 'face-card back-face-card');
-    
-    divCarta.appendChild(divFrente);
-    divCarta.appendChild(divBack);
-    cartas.appendChild(divCarta);
-    
-    divBack.innerHTML = "<img src='img/back.png'>";
-    
 
+    let template = `
+        <div class="carta">
+            <div class="face-card front-face-card"> </div>
+            <div class="face-card back-face-card"><img src="img/back.png"></div>
+        </div>`;
+
+    cartas.innerHTML = cartas.innerHTML + template;
+      
 }
 
 
@@ -45,7 +37,10 @@ function pedirCartas(){
 }
 pedirCartas();
 
+function cartasAleatorias(){
 
+    return Math.random() -0.5;
+}
 
 
 
