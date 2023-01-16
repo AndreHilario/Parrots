@@ -13,23 +13,25 @@ function cartasAleatorias(){
     return Math.random() -0.5;
 }
 
+
+
 let numCard = 0;
 let posicao = 0;
+
 
 const cartas = document.querySelector('.jogo-da-memoria');
 console.log(cartas);
 
 function criarCartas(){
-
     list.sort(cartasAleatorias);
     while(posicao < numCard){
 
         
 
         let template = `
-        <div onclick="virarCarta(this)" class="carta">
-            <div class="face-card front-face-card"><img src="${list[posicao]}"></div>
-            <div class="face-card back-face-card"><img src="img/back.png"></div>
+        <div onclick="viraCarta(this)" class="carta">
+            <div class="face-card"><img src="img/back.png"></div>
+            <div class="back-face-card face-card"><img src="${list[posicao]}"></div>
         </div>
         `;
 
@@ -59,29 +61,76 @@ function pedirCartas(){
 }
 pedirCartas();
 
+let jogadas = 0;
+let firstClick;
+let secondClick;
 
-function virarCarta(cartaClicada){
 
+function viraCarta(cartaClicada){
 
-    const cartaAnterior = document.querySelector('.jogo-da-memoria .clicado');
+    const cartaAnterior = document.querySelector('.clicado');
     
     if (cartaAnterior !== null){
 
         cartaAnterior.classList.remove('clicado');
-        
+       
     } 
     cartaClicada.classList.add('clicado');
 
-    const cartaGiro = document.querySelector('.jogo-da-memoria .clicado .back-face-card');
-    if(cartaGiro.parentNode.classList.contains('clicado')){
-        cartaGiro.classList.add('girar-back-face-card');
-    } 
-    
+
+    jogadas++;
+    console.log(jogadas);
+
+    if(firstClick === undefined){
+        firstClick = cartaClicada.innerHTML;
+        console.log(firstClick);
+        const carta1 = document.querySelector('.clicado .back-face-card');
+        carta1.classList.add('girar-back');
+
+    } else if(firstClick !== undefined && secondClick === undefined){
+        secondClick = cartaClicada.innerHTML;
+        console.log(secondClick);
+        const carta2 = document.querySelector('.clicado .back-face-card');
+        carta2.classList.add('girar-back');
+        if (firstClick === secondClick){
+            manterCartas();
+            total = total + 2;
+
+            fim();
+        } else {
+            setTimeout(desvirarCartas, 1000);
+        }
+    }
     
 }
 
+function manterCartas(){
+    return;
+}
+
+function desvirarCartas(){
+
+    //const cartaGiro = document.querySelector('.girar-back');
+
+    //cartaGiro.classList.remove('girar-back');
+    //cartaGiro.classList.add('girar-front');
+    
+
+    const second = document.querySelector('.clicado .back-face-card');
+    second.classList.remove('girar-back');
+    second.classList.add('girar-front');
 
 
+    firstClick = undefined;
+    secondClick = undefined;
+    
+}
 
+let total = 0;
 
+function fim(){
+    if(numCard === total){
+        alert(`Você ganhou em ${jogadas} jogadas!`);
+    }
+}
 

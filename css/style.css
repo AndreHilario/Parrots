@@ -42,15 +42,10 @@ body {
     position: absolute;
     top: 13px;
     backface-visibility: hidden;
-    transition: all .5s;
+    transition: all .8s ease;
     transform-style: preserve-3d;
   }
-  .front-face-card img {
-    width: 100px;
-    height: 100px;
-
-  }
-  .back-face-card img {
+  .carta img {
     width: 100px;
     height: 100px;
   }
@@ -59,17 +54,14 @@ body {
     transform: rotateY(180deg);
   }
 
-  .girar-back .face-card {
+  .girar-back {
     transform: rotateY(0deg);
   }
 
-  .girar-front .face-card {
-    transform: rotateY(-180deg);
-    
+  .girar-front {
+    transform: rotateY(-180deg);  
   }
-  .clicado {
-    font-size: 1px;
-  }
+ 
   
   @media (max-width: 614px){
     .jogo-da-memoria {
