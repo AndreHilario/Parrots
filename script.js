@@ -77,21 +77,23 @@ function viraCarta(cartaClicada){
     } 
     cartaClicada.classList.add('clicado');
 
-
     jogadas++;
     console.log(jogadas);
 
     if(firstClick === undefined){
         firstClick = cartaClicada.innerHTML;
         console.log(firstClick);
+
         const carta1 = document.querySelector('.clicado .back-face-card');
         carta1.classList.add('girar-back');
 
     } else if(firstClick !== undefined && secondClick === undefined){
         secondClick = cartaClicada.innerHTML;
         console.log(secondClick);
+
         const carta2 = document.querySelector('.clicado .back-face-card');
         carta2.classList.add('girar-back');
+
         if (firstClick === secondClick){
             manterCartas();
             total = total + 2;
@@ -99,27 +101,28 @@ function viraCarta(cartaClicada){
             fim();
         } else {
             setTimeout(desvirarCartas, 1000);
+
         }
     }
     
 }
 
 function manterCartas(){
+    firstClick = undefined;
+    secondClick = undefined;
     return;
 }
 
 function desvirarCartas(){
 
-    //const cartaGiro = document.querySelector('.girar-back');
+    const cartaGiro = document.querySelectorAll('.girar-back');
+    console.log(cartaGiro);
+    for(let i = 0; i < cartaGiro.length; i++){
 
-    //cartaGiro.classList.remove('girar-back');
-    //cartaGiro.classList.add('girar-front');
-    
-
-    const second = document.querySelector('.clicado .back-face-card');
-    second.classList.remove('girar-back');
-    second.classList.add('girar-front');
-
+        cartaGiro[i].classList.remove('girar-back');
+        cartaGiro[i].classList.add('girar-front');
+        cartaGiro[i].classList.remove('girar-front');
+    }
 
     firstClick = undefined;
     secondClick = undefined;
@@ -131,6 +134,7 @@ let total = 0;
 function fim(){
     if(numCard === total){
         alert(`Você ganhou em ${jogadas} jogadas!`);
+
     }
 }
 
