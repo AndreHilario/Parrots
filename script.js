@@ -133,6 +133,7 @@ function relogio(){
     document.querySelector(".timer").innerHTML = segundos;
 }
 const parada = setInterval(relogio, 1000);
+
 function fim(){
     if(numCard === total){
         clearInterval(parada);
@@ -141,6 +142,7 @@ function fim(){
         if(reinicio === "sim"){
             window.location.reload(true);
         } else if(reinicio === "não"){
+            clearInterval(parada);
             return;
         }
 
