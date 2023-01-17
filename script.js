@@ -13,7 +13,7 @@ function cartasAleatorias(){
     return Math.random() -0.5;
 }
 
-
+setInterval(relogio, 1000);
 
 let numCard = 0;
 let posicao = 0;
@@ -66,7 +66,7 @@ let secondClick;
 
 
 function viraCarta(cartaClicada){
-    setInterval(relogio, 1000);
+    
 
     if(cartaClicada.classList.contains("girar")){
 
@@ -128,10 +128,11 @@ let total = 0;
 let segundos = 0;
 
 function relogio(){
-    segundos = segundos + 1;
+    segundos++;
     document.querySelector(".timer").innerHTML = segundos;
 }
 const parada = setInterval(relogio, 1000);
+
 
 function fim(){
     if(numCard === total){
@@ -141,8 +142,9 @@ function fim(){
         if(reinicio === "sim"){
             window.location.reload(true);
         } else if(reinicio === "não"){
-            const remover = document.querySelector('.timer');
-            remover.classList.remove('timer');
+            clearInterval(parada);
+            const removerTimer = document.querySelector('.timer');
+            removerTimer.classList.remove('timer');
             return;
         } else {
             alert("Digite apenas sim ou não!")
