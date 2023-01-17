@@ -119,7 +119,6 @@ function desvirarCartas(){
     firstClick.classList.remove('girar');
     secondClick.classList.remove('girar');
     
-    
     firstClick = undefined;
     secondClick = undefined;
     
@@ -142,8 +141,12 @@ function fim(){
         if(reinicio === "sim"){
             window.location.reload(true);
         } else if(reinicio === "não"){
-            clearInterval(parada);
+            const remover = document.querySelector('.timer');
+            remover.classList.remove('timer');
             return;
+        } else {
+            alert("Digite apenas sim ou não!")
+            reinicio = prompt("Você gostaria de reiniciar o jogo? (sim/não)");
         }
 
     }
