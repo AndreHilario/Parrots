@@ -31,7 +31,7 @@ function criarCartas(){
         let template = `
         <div onclick="viraCarta(this)" class="carta">
             <div class="face-card"><img src="img/back.png"></div>
-            <div class="back-face-card face-card"><img src="${list[posicao]}"></div>
+            <div class="back-card face-card"><img src="${list[posicao]}"></div>
         </div>
         `;
 
@@ -68,46 +68,47 @@ let secondClick;
 
 function viraCarta(cartaClicada){
 
-    const cartaAnterior = document.querySelector('.clicado');
+    if(cartaClicada.classList.contains("girar")){
+
+        return;
+    }
+
+    if(firstClick !== undefined && secondClick !== undefined){
+
+        return;
+    }
+
+    if(firstClick === undefined || secondClick === undefined){
     
-    if (cartaAnterior !== null){
-
-        cartaAnterior.classList.remove('clicado');
-       
-    } 
-    cartaClicada.classList.add('clicado');
-
-    jogadas++;
-    console.log(jogadas);
-
+        jogadas++;
+        console.log(jogadas);
+    
+    }
     if(firstClick === undefined){
-        firstClick = cartaClicada.innerHTML;
-        console.log(firstClick);
-
-        const carta1 = document.querySelector('.clicado .back-face-card');
-        carta1.classList.add('girar-back');
+        cartaClicada.classList.add("girar");
+        firstClick = cartaClicada;
+    
+        
 
     } else if(firstClick !== undefined && secondClick === undefined){
-        secondClick = cartaClicada.innerHTML;
-        console.log(secondClick);
+        cartaClicada.classList.add("girar");
+        secondClick = cartaClicada;
+        
 
-        const carta2 = document.querySelector('.clicado .back-face-card');
-        carta2.classList.add('girar-back');
-
-        if (firstClick === secondClick){
+        if (firstClick.innerHTML === secondClick.innerHTML){
             manterCartas();
             total = total + 2;
-
-            fim();
+            setTimeout(fim, 1000);
         } else {
             setTimeout(desvirarCartas, 1000);
 
         }
     }
-    
+     
 }
 
 function manterCartas(){
+    
     firstClick = undefined;
     secondClick = undefined;
     return;
@@ -115,15 +116,10 @@ function manterCartas(){
 
 function desvirarCartas(){
 
-    const cartaGiro = document.querySelectorAll('.girar-back');
-    console.log(cartaGiro);
-    for(let i = 0; i < cartaGiro.length; i++){
-
-        cartaGiro[i].classList.remove('girar-back');
-        cartaGiro[i].classList.add('girar-front');
-        cartaGiro[i].classList.remove('girar-front');
-    }
-
+    firstClick.classList.remove('girar');
+    secondClick.classList.remove('girar');
+    
+    
     firstClick = undefined;
     secondClick = undefined;
     
