@@ -20,7 +20,6 @@ let posicao = 0;
 
 
 const cartas = document.querySelector('.jogo-da-memoria');
-console.log(cartas);
 
 function criarCartas(){
     list.sort(cartasAleatorias);
@@ -30,7 +29,7 @@ function criarCartas(){
 
         let template = `
         <div data-test="card" onclick="viraCarta(this)" class="carta">
-            <div data-test="face-down-image" class="face-card"><img src="img/back.png"></div>
+            <div data-test="face-down-image" class="front-card face-card"><img src="img/back.png"></div>
             <div data-test="face-up-image" class="back-card face-card"><img src="${list[posicao]}"></div>
         </div>
         `;
@@ -43,15 +42,15 @@ function criarCartas(){
 
 
 function pedirCartas(){
-    const qtdCartas = prompt("Digite o número de cartas que quer jogar(de 4 a 14)");
+    const qtdCartas = prompt("Digite o número de cartas que quer jogar(entre 4 a 14)");
     numCard = Number(qtdCartas);
     if(numCard === 4 || numCard === 6 || numCard === 8 || numCard === 10 || numCard === 12 || numCard === 14){
         for(let indice = 0; indice < numCard; indice++){
             list.push(listaCards[indice]);
-            console.log(list);
         }
         for(let i = 0; i < numCard; i++){
             criarCartas();
+
         }
         
     } else {
@@ -67,6 +66,7 @@ let secondClick;
 
 
 function viraCarta(cartaClicada){
+    setInterval(relogio, 1000);
 
     if(cartaClicada.classList.contains("girar")){
 
@@ -98,7 +98,7 @@ function viraCarta(cartaClicada){
         if (firstClick.innerHTML === secondClick.innerHTML){
             manterCartas();
             total = total + 2;
-            setTimeout(fim, 1000);
+            setTimeout(fim, 800);
         } else {
             setTimeout(desvirarCartas, 1000);
 
@@ -126,10 +126,23 @@ function desvirarCartas(){
 }
 
 let total = 0;
+let segundos = 0;
 
+function relogio(){
+    segundos = segundos + 1;
+    document.querySelector(".timer").innerHTML = segundos;
+}
+const parada = setInterval(relogio, 1000);
 function fim(){
     if(numCard === total){
-        alert(`Você ganhou em ${jogadas} jogadas!`);
+        clearInterval(parada);
+        alert(`Você ganhou em ${jogadas} jogadas! A duração do jogo foi de ${segundos} segundos!`);
+        const reinicio = prompt("Você gostaria de reiniciar o jogo? (sim/não)");
+        if(reinicio === "sim"){
+            window.location.reload(true);
+        } else if(reinicio === "não"){
+            return;
+        }
 
     }
 }

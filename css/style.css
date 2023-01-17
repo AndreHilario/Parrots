@@ -16,7 +16,7 @@ body {
 }
 .jogo-da-memoria {
     margin-left: 122px;
-    margin-right: 116px;
+    margin-right: 122px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,6 +61,13 @@ body {
   .girar .front-card {
     transform: rotateY(-180deg);  
   }
+  .timer {
+    color:#75B79E;
+    font-size: 56px;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+  }
  
   
   @media (max-width: 614px){
@@ -76,10 +83,14 @@ body {
         line-height: 45px;
         text-align: center;
     }
+    .timer {
+      top: 80px;
+      right: 15px;
+      font-size: 40px;
+    }
   }
-  @media (max-width: 375px){
+  @media (max-width: 391px){
     .jogo-da-memoria {
-        margin-left: 75px;
         flex-direction: column;
         justify-content: center;
         align-items: space-between;
@@ -90,5 +101,10 @@ body {
         font-weight: 700;
         line-height: 42px;
         text-align: center;
+    }
+    .timer {
+      top: 80px;
+      font-size: 36px;
+      right: 15px;
     }
   }
