@@ -42,7 +42,7 @@ body {
     position: absolute;
     top: 13px;
     backface-visibility: hidden;
-    transition: all .8s ease;
+    transition: all .5s;
     transform-style: preserve-3d;
   }
   .carta img {

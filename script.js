@@ -29,9 +29,9 @@ function criarCartas(){
         
 
         let template = `
-        <div onclick="viraCarta(this)" class="carta">
-            <div class="face-card"><img src="img/back.png"></div>
-            <div class="back-card face-card"><img src="${list[posicao]}"></div>
+        <div data-test="card" onclick="viraCarta(this)" class="carta">
+            <div data-test="face-down-image" class="face-card"><img src="img/back.png"></div>
+            <div data-test="face-up-image" class="back-card face-card"><img src="${list[posicao]}"></div>
         </div>
         `;
 
