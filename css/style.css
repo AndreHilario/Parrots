@@ -70,14 +70,14 @@ body {
         align-items: space-between;
     }
     .titulo h1 {
-        width: 312px;
-        font-size: 36px;
+        width: 400px;
+        font-size: 40px;
         font-weight: 700;
-        line-height: 42px;
+        line-height: 45px;
         text-align: center;
     }
   }
-  @media (max-width: 335px){
+  @media (max-width: 375px){
     .jogo-da-memoria {
         margin-left: 75px;
         flex-direction: column;
