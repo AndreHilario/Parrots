@@ -79,17 +79,27 @@ body {
   }
 
   @media (max-width: 935px){
-    .jogo-da-memoria {
-        flex-direction: column;
-        justify-content: center;
-        align-items: space-between;
-    }
     .titulo h1 {
         width: 400px;
         font-size: 50px;
         font-weight: 700;
         line-height: 50px;
         text-align: center;
+    }
+    .jogo-da-memoria {
+      margin-left: 122px;
+      margin-right: 122px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .carta {
+      margin-top: 34px;
+      width: 100px;
+      height: 175px;
+      position: relative;
+      
     }
     .timer {
       top: 90px;
@@ -101,10 +111,26 @@ body {
   
   @media (max-width: 614px){
     .jogo-da-memoria {
-        flex-direction: column;
-        justify-content: center;
-        align-items: space-between;
-    }
+      display: flex;
+      gap: 20px;
+      margin-left: 0px;
+      margin-right: 0px;
+  }
+  .carta {
+    width: 80px;
+    height: 150px;
+    position: relative;
+  }
+  .carta img {
+    width: 70px;
+    height: 70px;
+  }
+  .face-card p {
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    padding: 5px;
+  }
     .titulo h1 {
         width: 400px;
         font-size: 40px;
@@ -120,10 +146,10 @@ body {
   }
   @media (max-width: 391px){
     .jogo-da-memoria {
-        flex-direction: column;
-        justify-content: center;
-        align-items: space-between;
-        margin-left: 95px;
+        display: flex;
+        gap: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     .titulo h1 {
         width: 312px;
@@ -131,6 +157,21 @@ body {
         font-weight: 700;
         line-height: 42px;
         text-align: center;
+    }
+    .carta {
+      width: 80px;
+      height: 150px;
+      position: relative;
+    }
+    .face-card p {
+      font-weight: bold;
+      font-size: 12px;
+      text-align: center;
+      padding: 5px;
+    }
+    .carta img {
+      width: 50px;
+      height: 50px;
     }
     .timer {
       font-size: 36px;
