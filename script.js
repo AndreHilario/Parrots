@@ -1,56 +1,57 @@
 const versiculos = [
-    "O Senhor é meu Pastor",
-    "nada me faltará - Salmos 23:1",
-    "Porque Deus amou o mundo",
-    "de tal maneira que deu o seu Filho unigênito - João 3:16a",
-    "Todos pecaram e",
-    "carecem da glória de Deus - Romanos 3:23",
-    "No princípio, criou",
-    "Deus os céus e a terra - Gênesis 1:1",
-    "Alegrei-me quando me disseram:",
-    "vamos à casa do Senhor - Salmos 122:1",
-    "Se confessarmos os nossos pecados",
-    "Ele é fiel e justo para nos perdoar o pecado e nos purificar de toda injustiça - 1João 1:9",
-    "Lâmpada para os meus pés é a tua palavra",
-    "e, luz para os meus caminhos - Salmos 119:105",
-    "Guardo no coração as tuas palavras,",
-    "para não pecar contra ti - Salmos 119:11",
-    "Porque o salário do pecado é a morte,",
-    "mas o dom gratuito de Deus é a vida eterna em Cristo Jesus, nosso Senhor - Romanos 6:23",
-    "No princípio era o Verbo, e o Verbo estava com Deus,",
-    "e o Verbo era Deus - João 1:1",
-    "Alegrai-vos sempre no Senhor;",
-    "outra vez digo: alegrai-vos - Filipenses 4:4",
-    "Deus é o nosso refúgio e fortaleza,",
-    "socorro bem presente nas tribulações - Salmos 46:1"
+    "O SENHOR É MEU PASTOR",
+    "NADA ME FALTARÁ - SALMOS 23:1",
+    "PORQUE DEUS AMOU O MUNDO",
+    "DE TAL MANEIRA QUE DEU O SEU FILHO UNIGÊNITO - JOÃO 3:16A",
+    "TODOS PECARAM E",
+    "CARECEM DA GLÓRIA DE DEUS - ROMANOS 3:23",
+    "NO PRINCÍPIO, CRIOU",
+    "DEUS OS CÉUS E A TERRA - GÊNESIS 1:1",
+    "ALEGREI-ME QUANDO ME DISSERAM:",
+    "VAMOS À CASA DO SENHOR - SALMOS 122:1",
+    "SE CONFESSARMOS OS NOSSOS PECADOS ELE É FIEL E JUSTO",
+    "PARA NOS PERDOAR O PECADO E NOS PURIFICAR DE TODA INJUSTIÇA - 1JOÃO 1:9",
+    "LÂMPADA PARA OS MEUS PÉS É A TUA PALAVRA",
+    "E, LUZ PARA OS MEUS CAMINHOS - SALMOS 119:105",
+    "GUARDO NO CORAÇÃO AS TUAS PALAVRAS,",
+    "PARA NÃO PECAR CONTRA TI - SALMOS 119:11",
+    "PORQUE O SALÁRIO DO PECADO É A MORTE, MAS O DOM GRATUITO DE DEUS",
+    "É A VIDA ETERNA EM CRISTO JESUS, NOSSO SENHOR - ROMANOS 6:23",
+    "NO PRINCÍPIO ERA O VERBO, E O VERBO ESTAVA COM DEUS,",
+    "E O VERBO ERA DEUS - JOÃO 1:1",
+    "ALEGRAI-VOS SEMPRE NO SENHOR;",
+    "OUTRA VEZ DIGO: ALEGRAI-VOS - FILIPENSES 4:4",
+    "DEUS É O NOSSO REFÚGIO E FORTALEZA,",
+    "SOCORRO BEM PRESENTE NAS TRIBULAÇÕES - SALMOS 46:1"
 ];
 
 const versiculosCompletos = [
-"O Senhor é meu Pastor nada me faltará - Salmos 23:1", 
-"nada me faltará - Salmos 23:1 O Senhor é meu Pastor",
-"Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito - João 3:16a",
-"de tal maneira que deu o seu Filho unigênito - João 3:16a Porque Deus amou o mundo",
-"Todos pecaram e carecem da glória de Deus - Romanos 3:23",
-"carecem da glória de Deus - Romanos 3:23 Todos pecaram e",
-"No princípio, criou Deus os céus e a terra - Gênesis 1:1",
-"Deus os céus e a terra - Gênesis 1:1 No princípio, criou",
-"Alegrei-me quando me disseram: vamos à casa do Senhor - Salmos 122:1",
-"vamos à casa do Senhor - Salmos 122:1 Alegrei-me quando me disseram:",
-"Se confessarmos os nossos pecados Ele é fiel e justo para nos perdoar o pecado e nos purificar de toda injustiça - 1João 1:9",
-"Ele é fiel e justo para nos perdoar o pecado e nos purificar de toda injustiça - 1João 1:9 Se confessarmos os nossos pecados",
-"Lâmpada para os meus pés é a tua palavra e, luz para os meus caminhos - Salmos 119:105",
-"e, luz para os meus caminhos - Salmos 119:105 Lâmpada para os meus pés é a tua palavra",
-"Guardo no coração as tuas palavras, para não pecar contra ti - Salmos 119:11",
-"para não pecar contra ti - Salmos 119:11 Guardo no coração as tuas palavras,",
-"Porque o salário do pecado é a morte, mas o dom gratuito de Deus é a vida eterna em Cristo Jesus, nosso Senhor - Romanos 6:23",
-"mas o dom gratuito de Deus é a vida eterna em Cristo Jesus, nosso Senhor - Romanos 6:23 Porque o salário do pecado é a morte,",
-"No princípio era o Verbo, e o Verbo estava com Deus, e o Verbo era Deus - João 1:1",
-"e o Verbo era Deus - João 1:1 No princípio era o Verbo, e o Verbo estava com Deus,",
-"Alegrai-vos sempre no Senhor; outra vez digo: alegrai-vos - Filipenses 4:4",
-"outra vez digo: alegrai-vos - Filipenses 4:4 Alegrai-vos sempre no Senhor;",
-"Deus é o nosso refúgio e fortaleza, socorro bem presente nas tribulações - Salmos 46:1",
-"socorro bem presente nas tribulações - Salmos 46:1 Deus é o nosso refúgio e fortaleza,"
+    "O SENHOR É MEU PASTOR NADA ME FALTARÁ - SALMOS 23:1",
+    "NADA ME FALTARÁ - SALMOS 23:1 O SENHOR É MEU PASTOR",
+    "PORQUE DEUS AMOU O MUNDO DE TAL MANEIRA QUE DEU O SEU FILHO UNIGÊNITO - JOÃO 3:16A",
+    "DE TAL MANEIRA QUE DEU O SEU FILHO UNIGÊNITO - JOÃO 3:16A PORQUE DEUS AMOU O MUNDO",
+    "TODOS PECARAM E CARECEM DA GLÓRIA DE DEUS - ROMANOS 3:23",
+    "CARECEM DA GLÓRIA DE DEUS - ROMANOS 3:23 TODOS PECARAM E",
+    "NO PRINCÍPIO, CRIOU DEUS OS CÉUS E A TERRA - GÊNESIS 1:1",
+    "DEUS OS CÉUS E A TERRA - GÊNESIS 1:1 NO PRINCÍPIO, CRIOU",
+    "ALEGREI-ME QUANDO ME DISSERAM: VAMOS À CASA DO SENHOR - SALMOS 122:1",
+    "VAMOS À CASA DO SENHOR - SALMOS 122:1 ALEGREI-ME QUANDO ME DISSERAM:",
+    "SE CONFESSARMOS OS NOSSOS PECADOS ELE É FIEL E JUSTO PARA NOS PERDOAR O PECADO E NOS PURIFICAR DE TODA INJUSTIÇA - 1JOÃO 1:9",
+    "PARA NOS PERDOAR O PECADO E NOS PURIFICAR DE TODA INJUSTIÇA - 1JOÃO 1:9 SE CONFESSARMOS OS NOSSOS PECADOS ELE É FIEL E JUSTO",
+    "LÂMPADA PARA OS MEUS PÉS É A TUA PALAVRA E, LUZ PARA OS MEUS CAMINHOS - SALMOS 119:105",
+    "E, LUZ PARA OS MEUS CAMINHOS - SALMOS 119:105 LÂMPADA PARA OS MEUS PÉS É A TUA PALAVRA",
+    "GUARDO NO CORAÇÃO AS TUAS PALAVRAS, PARA NÃO PECAR CONTRA TI - SALMOS 119:11",
+    "PARA NÃO PECAR CONTRA TI - SALMOS 119:11 GUARDO NO CORAÇÃO AS TUAS PALAVRAS,",
+    "PORQUE O SALÁRIO DO PECADO É A MORTE, MAS O DOM GRATUITO DE DEUS É A VIDA ETERNA EM CRISTO JESUS, NOSSO SENHOR - ROMANOS 6:23",
+    "É A VIDA ETERNA EM CRISTO JESUS, NOSSO SENHOR - ROMANOS 6:23 PORQUE O SALÁRIO DO PECADO É A MORTE, MAS O DOM GRATUITO DE DEUS",
+    "NO PRINCÍPIO ERA O VERBO, E O VERBO ESTAVA COM DEUS, E O VERBO ERA DEUS - JOÃO 1:1",
+    "E O VERBO ERA DEUS - JOÃO 1:1 NO PRINCÍPIO ERA O VERBO, E O VERBO ESTAVA COM DEUS,",
+    "ALEGRAI-VOS SEMPRE NO SENHOR; OUTRA VEZ DIGO: ALEGRAI-VOS - FILIPENSES 4:4",
+    "OUTRA VEZ DIGO: ALEGRAI-VOS - FILIPENSES 4:4 ALEGRAI-VOS SEMPRE NO SENHOR;",
+    "DEUS É O NOSSO REFÚGIO E FORTALEZA, SOCORRO BEM PRESENTE NAS TRIBULAÇÕES - SALMOS 46:1",
+    "SOCORRO BEM PRESENTE NAS TRIBULAÇÕES - SALMOS 46:1 DEUS É O NOSSO REFÚGIO E FORTALEZA,"
 ];
+
 
 const lista = [];
 function versiculosAleatorios(){
@@ -94,7 +95,7 @@ function pedirCartas() {
     for(let i = 0; i < numCard; i++) {
         criarCartas();
     }
-        parada = setInterval(relogio, 1000);
+        //parada = setInterval(relogio, 1000);
 }
 
 function viraCarta(cartaClicada) {
